@@ -89,6 +89,21 @@ class LinkedList {
 
     return tempArray[tempArray.length - 1];
   }
+
+  at(index) {
+    const tempArray = [];
+
+    let temp = this.#list;
+
+    while (temp.NextNode !== null) {
+      tempArray.push(temp);
+      temp = temp.NextNode;
+    }
+
+    tempArray.push(temp);
+
+    return !tempArray[index] ? "Element not found" : tempArray[index];
+  }
 }
 
 const newList = new LinkedList();
@@ -109,3 +124,6 @@ console.log(newList.head());
 
 // check for last element in list
 console.log(newList.tail());
+
+// check for element at given index
+console.log(newList.at(2));
