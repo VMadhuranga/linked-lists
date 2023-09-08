@@ -74,6 +74,21 @@ class LinkedList {
 
     return tempArray[0];
   }
+
+  tail() {
+    const tempArray = [];
+
+    let temp = this.#list;
+
+    while (temp.NextNode !== null) {
+      tempArray.push(temp);
+      temp = temp.NextNode;
+    }
+
+    tempArray.push(temp);
+
+    return tempArray[tempArray.length - 1];
+  }
 }
 
 const newList = new LinkedList();
@@ -91,3 +106,6 @@ console.log(newList.size());
 
 // check for first element in list
 console.log(newList.head());
+
+// check for last element in list
+console.log(newList.tail());
