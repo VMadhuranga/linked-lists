@@ -59,6 +59,21 @@ class LinkedList {
 
     return tempArray.length;
   }
+
+  head() {
+    const tempArray = [];
+
+    let temp = this.#list;
+
+    while (temp.NextNode !== null) {
+      tempArray.push(temp);
+      temp = temp.NextNode;
+    }
+
+    tempArray.push(temp);
+
+    return tempArray[0];
+  }
 }
 
 const newList = new LinkedList();
@@ -73,3 +88,6 @@ newList.prepend("hello6");
 
 // check for list size
 console.log(newList.size());
+
+// check for first element in list
+console.log(newList.head());
