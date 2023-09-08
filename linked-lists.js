@@ -118,6 +118,19 @@ class LinkedList {
     temp = tempArray[tempArray.length - 1];
     temp.NextNode = null;
   }
+
+  contains(data) {
+    let temp = this.#list;
+
+    while (temp.NextNode !== null) {
+      temp = temp.NextNode;
+      if (temp.Data === data) {
+        return true;
+      }
+    }
+
+    return false;
+  }
 }
 
 const newList = new LinkedList();
@@ -144,3 +157,13 @@ console.log(newList.at(2));
 
 // remove last element from list
 newList.pop();
+
+// check list size after removal
+console.log(newList.size());
+
+// append and prepend new values
+newList.append("helloA");
+newList.prepend("helloB");
+
+// check list contains passed data
+console.log(newList.contains("helloZ"));
