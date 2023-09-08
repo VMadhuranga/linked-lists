@@ -25,6 +25,25 @@ class Node {
 
 class LinkedList {
   #list = null;
+
+  prepend(data) {
+    this.#list = new Node(data, this.#list);
+  }
+
+  append(data) {
+    if (this.#list === null) {
+      this.prepend(data);
+      return;
+    }
+
+    let temp = this.#list;
+
+    while (temp.NextNode !== null) {
+      temp = temp.NextNode;
+    }
+
+    temp.NextNode = new Node(data);
+  }
 }
 
 const newList = new LinkedList();
