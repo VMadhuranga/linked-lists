@@ -27,3 +27,9 @@ Add following methods:
 
 - `insertAt(value, index)` - that inserts a new node with the provided value at the given index.
 - `removeAt(index)` - that removes the node at the given index.
+
+### Resources
+
+Resources that been helpful for me to build this project:
+
+- https://web.archive.org/web/20200217010131/http://www.cs.cmu.edu/~adamchik/15-121/lectures/Linked%20Lists/linked%20lists.html
