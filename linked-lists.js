@@ -104,6 +104,20 @@ class LinkedList {
 
     return !tempArray[index] ? "Element not found" : tempArray[index];
   }
+
+  pop() {
+    const tempArray = [];
+
+    let temp = this.#list;
+
+    while (temp.NextNode !== null) {
+      tempArray.push(temp);
+      temp = temp.NextNode;
+    }
+
+    temp = tempArray[tempArray.length - 1];
+    temp.NextNode = null;
+  }
 }
 
 const newList = new LinkedList();
@@ -127,3 +141,6 @@ console.log(newList.tail());
 
 // check for element at given index
 console.log(newList.at(2));
+
+// remove last element from list
+newList.pop();
