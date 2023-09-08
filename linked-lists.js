@@ -146,6 +146,22 @@ class LinkedList {
 
     return index === -1 ? null : index;
   }
+
+  toString() {
+    const tempArray = [];
+
+    let temp = this.#list;
+
+    while (temp.NextNode !== null) {
+      tempArray.push(temp.Data);
+      temp = temp.NextNode;
+    }
+
+    tempArray.push(temp.Data);
+    tempArray.push(`${temp.NextNode}`);
+
+    return tempArray.join(" -> ");
+  }
 }
 
 const newList = new LinkedList();
@@ -185,3 +201,6 @@ console.log(newList.contains("helloZ"));
 
 // find index of element contains data
 console.log(newList.find("hello1"));
+
+// log list data
+console.log(newList.toString());
