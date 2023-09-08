@@ -1,5 +1,8 @@
 /* eslint-disable no-console */
 /* eslint-disable max-classes-per-file */
+
+// NOTE: if you want log inside terminal turn private fields into public fields in Node class
+
 class Node {
   #data;
 
