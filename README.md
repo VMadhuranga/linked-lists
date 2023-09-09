@@ -21,13 +21,6 @@ Build the following methods in your linked list class:
 
 Fork and clone the repo and open `index.html` file
 
-### TODO
-
-Add following methods:
-
-- `insertAt(value, index)` - that inserts a new node with the provided value at the given index.
-- `removeAt(index)` - that removes the node at the given index.
-
 ### Resources
 
 Resources that been helpful for me to build this project:
