@@ -53,6 +53,8 @@ class LinkedList {
   }
 
   size() {
+    if (this.#isEmpty()) return "Empty list";
+
     const tempArray = [];
 
     let temp = this.#list;
@@ -68,6 +70,8 @@ class LinkedList {
   }
 
   head() {
+    if (this.#isEmpty()) return "Empty list";
+
     const tempArray = [];
 
     let temp = this.#list;
@@ -83,6 +87,8 @@ class LinkedList {
   }
 
   tail() {
+    if (this.#isEmpty()) return "Empty list";
+
     const tempArray = [];
 
     let temp = this.#list;
@@ -98,6 +104,8 @@ class LinkedList {
   }
 
   at(index) {
+    if (this.#isEmpty()) return "Empty list";
+
     const tempArray = [];
 
     let temp = this.#list;
@@ -109,7 +117,7 @@ class LinkedList {
 
     tempArray.push(temp);
 
-    return !tempArray[index] ? "Element not found" : tempArray[index];
+    return !tempArray[index] ? "Node not found" : tempArray[index];
   }
 
   pop() {
