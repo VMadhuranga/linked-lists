@@ -29,6 +29,10 @@ class Node {
 class LinkedList {
   #list = null;
 
+  #isEmpty() {
+    return this.#list === null;
+  }
+
   prepend(data) {
     this.#list = new Node(data, this.#list);
   }
