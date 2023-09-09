@@ -117,7 +117,9 @@ class LinkedList {
 
     tempArray.push(temp);
 
-    return !tempArray[index] ? "Node not found" : tempArray[index];
+    return !tempArray[index]
+      ? "Node not found at given index"
+      : tempArray[index];
   }
 
   pop() {
@@ -195,17 +197,39 @@ class LinkedList {
   }
 
   insertAt(data, index) {
-    if (this.#list === null || index === 0) {
+    if (this.#isEmpty() || index === 0) {
       this.prepend(data);
       return;
     }
+
     const node = new Node(data);
 
-    if (this.at(index) !== "Element not found") {
+    if (this.at(index) !== "Node not found at given index") {
       const nodeAtCurIndex = this.at(index);
       const nodeAtPreIndex = this.at(index - 1);
       node.NextNode = nodeAtCurIndex;
       nodeAtPreIndex.NextNode = node;
+      return;
+    }
+
+    console.log(this.at(index));
+  }
+
+  removeAt(index) {
+    if (this.#isEmpty()) {
+      console.log("Empty list");
+      return;
+    }
+
+    if (this.size() === 1) {
+      this.#list = null;
+      return;
+    }
+
+    if (this.at(index) !== "Node not found at given index") {
+      const nodeAtNextIndex = this.at(index + 1);
+      const nodeAtPreIndex = this.at(index - 1);
+      nodeAtPreIndex.NextNode = nodeAtNextIndex;
       return;
     }
 
@@ -252,9 +276,12 @@ const newList = new LinkedList();
 // console.log(newList.find("hello1"));
 
 // // log list data
-console.log(newList.toString());
+// console.log(newList.toString());
 
 // inset data at given index
 // newList.insertAt("helloP", 1);
 
-// console.log(newList);
+// remove node at given index
+newList.removeAt(1);
+
+console.log(newList);
