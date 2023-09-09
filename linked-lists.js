@@ -145,6 +145,8 @@ class LinkedList {
   }
 
   contains(data) {
+    if (this.#isEmpty()) return "Empty list";
+
     let temp = this.#list;
 
     while (temp.NextNode !== null) {
@@ -158,6 +160,8 @@ class LinkedList {
   }
 
   find(data) {
+    if (this.#isEmpty()) return "Empty list";
+
     const tempArray = [];
 
     let temp = this.#list;
@@ -173,6 +177,8 @@ class LinkedList {
   }
 
   toString() {
+    if (this.#isEmpty()) return "Empty list";
+
     const tempArray = [];
 
     let temp = this.#list;
@@ -245,8 +251,10 @@ const newList = new LinkedList();
 // // find index of element contains data
 // console.log(newList.find("hello1"));
 
-// newList.insertAt("helloP", 1);
 // // log list data
-// console.log(newList.toString());
+console.log(newList.toString());
+
+// inset data at given index
+// newList.insertAt("helloP", 1);
 
 // console.log(newList);
