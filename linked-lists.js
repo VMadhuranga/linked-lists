@@ -221,11 +221,6 @@ class LinkedList {
       return;
     }
 
-    if (this.size() === 1) {
-      this.#list = null;
-      return;
-    }
-
     if (this.at(index) !== "Node not found at given index") {
       const nodeAtNextIndex = this.at(index + 1);
       const nodeAtPreIndex = this.at(index - 1);
