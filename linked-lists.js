@@ -121,6 +121,16 @@ class LinkedList {
   }
 
   pop() {
+    if (this.#isEmpty()) {
+      console.log("Empty list");
+      return;
+    }
+
+    if (this.size() === 1) {
+      this.#list = null;
+      return;
+    }
+
     const tempArray = [];
 
     let temp = this.#list;
@@ -238,3 +248,5 @@ const newList = new LinkedList();
 // newList.insertAt("helloP", 1);
 // // log list data
 // console.log(newList.toString());
+
+// console.log(newList);
