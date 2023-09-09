@@ -20,6 +20,7 @@ Build the following methods in your linked list class:
 ### Usage
 
 Fork and clone the repo and open `index.html` file
+Add necessary test cases to `index.js` to manually check
 
 ### Resources
 
