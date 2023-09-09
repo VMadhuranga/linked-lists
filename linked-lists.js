@@ -234,47 +234,49 @@ class LinkedList {
 
 const newList = new LinkedList();
 
+// Test cases
+
 // append and prepend data
-// newList.append("hello1");
-// newList.append("hello2");
-// newList.append("hello3");
-// newList.prepend("hello4");
-// newList.prepend("hello5");
-// newList.prepend("hello6");
+newList.append("hello1");
+newList.append("hello2");
+newList.append("hello3");
+newList.prepend("hello4");
+newList.prepend("hello5");
+newList.prepend("hello6");
 
 // check for list size
-// console.log(newList.size());
+console.log(newList.size());
 
 // check for first element in list
-// console.log(newList.head());
+console.log(newList.head());
 
 // check for last element in list
-// console.log(newList.tail());
+console.log(newList.tail());
 
 // check for element at given index
-// console.log(newList.at(2));
+console.log(newList.at(2));
 
 // remove last element from list
-// newList.pop();
+newList.pop();
 
 // check list size after removal
-// console.log(newList.size());
+console.log(newList.size());
 
 // append and prepend new values
-// newList.append("helloA");
-// newList.prepend("helloB");
+newList.append("helloA");
+newList.prepend("helloB");
 
 // // check list contains passed data
-// console.log(newList.contains("helloZ"));
+console.log(newList.contains("helloZ"));
 
 // // find index of element contains data
-// console.log(newList.find("hello1"));
+console.log(newList.find("hello1"));
 
 // // log list data
-// console.log(newList.toString());
+console.log(newList.toString());
 
 // inset data at given index
-// newList.insertAt("helloP", 1);
+newList.insertAt("helloP", 1);
 
 // remove node at given index
 newList.removeAt(1);
